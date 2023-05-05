@@ -61,19 +61,23 @@ var storeNumber = 0;
 
 document.getElementById("find").addEventListener("click", getArtist);
 
+function findSong() {
+    storeNumber = randomNumber;
+    document.getElementById("song").innerHTML = TwoKSongs[randomNumber].SongName;
+    document.getElementById("album").innerHTML = TwoKSongs[randomNumber].Album;
+    document.getElementById("artist").innerHTML = TwoKSongs[randomNumber].Artist;
+    document.getElementById("image").innerHTML = `<img src="${TwoKSongs[randomNumber].img}" class="card-img img-fluid rounded-start shadow-sm" alt="Find Your Song" />`;
+    document.getElementById("yt").href = TwoKSongs[randomNumber].YT;
+    document.getElementById("sf").src = TwoKSongs[randomNumber].Spotify;
+    document.getElementById("wiki").src = TwoKSongs[randomNumber].wiki;
+}
+
 function getArtist() {
     var randomNumber = Math.floor(Math.random() * TwoKSongs.length);
     if (randomNumber == storeNumber) {
-        getArtist();
+        randomNumber++;
+        findSong();
     } else {
-        storeNumber = randomNumber;
-        document.getElementById("song").innerHTML = TwoKSongs[randomNumber].SongName;
-        document.getElementById("album").innerHTML = TwoKSongs[randomNumber].Album;
-        document.getElementById("artist").innerHTML = TwoKSongs[randomNumber].Artist;
-        document.getElementById("image").innerHTML = `<img src="${TwoKSongs[randomNumber].img}" class="card-img img-fluid rounded-start shadow-sm" alt="Find Your Song" />`;
-        document.getElementById("yt").href = TwoKSongs[randomNumber].YT;
-        document.getElementById("sf").src = TwoKSongs[randomNumber].Spotify;
-        document.getElementById("wiki").src = TwoKSongs[randomNumber].wiki;
+        findSong();
     }
-        
 }
