@@ -1,0 +1,29 @@
+body {
+    background-image: url('BG-Concert (1).png');
+    background-size: cover;
+    width: 100%;
+    height: 100vh;
+}
+
+.card {
+    border: 1px solid rgb(0, 0, 0);
+    background-image: linear-gradient(rgb(161, 161, 161), white 50%, rgb(161, 161, 161));
+}
+
+.card-img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    border-top-right-radius: 0px;;
+    border-bottom-right-radius: 0px;
+    border: 1px solid grey;
+}
+
+.container {
+    height: 100vh;
+}
+
+.listen-logo {
+    width: 40px;
+    height: 40px;
+}
