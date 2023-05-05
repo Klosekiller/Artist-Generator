@@ -65,8 +65,10 @@ function getArtist() {
     var randomNumber = Math.floor(Math.random() * TwoKSongs.length);
     if (randomNumber == storeNumber) {
         randomNumber++;
+        return randomNumber;
         findSong();
     } else {
+        return randomNumber;
         findSong();
     }
 }
