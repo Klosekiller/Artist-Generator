@@ -56,9 +56,10 @@
     wiki: "https://en.wikipedia.org/wiki/Beyond_the_Sea_(song)"
 }]
 
+var storeNumber = 0;
+
 function getArtist() {
     var randomNumber = Math.floor(Math.random() * TwoKSongs.length);
-    var storeNumber = 0;
     if (randomNumber == storeNumber) {
         getArtist();
     } else {
