@@ -59,7 +59,7 @@
 
 var storeNumber = 0;
 
-document.getElementById("btn").addEventListener("click", getArtist());
+document.getElementById("find").addEventListener("click", getArtist);
 
 function getArtist() {
     var randomNumber = Math.floor(Math.random() * TwoKSongs.length);
