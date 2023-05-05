@@ -61,6 +61,16 @@ var storeNumber = 0;
 
 document.getElementById("find").addEventListener("click", getArtist);
 
+function getArtist() {
+    var randomNumber = Math.floor(Math.random() * TwoKSongs.length);
+    if (randomNumber == storeNumber) {
+        randomNumber++;
+        findSong();
+    } else {
+        findSong();
+    }
+}
+
 function findSong() {
     storeNumber = randomNumber;
     document.getElementById("song").innerHTML = TwoKSongs[randomNumber].SongName;
@@ -70,14 +80,4 @@ function findSong() {
     document.getElementById("yt").href = TwoKSongs[randomNumber].YT;
     document.getElementById("sf").src = TwoKSongs[randomNumber].Spotify;
     document.getElementById("wiki").src = TwoKSongs[randomNumber].wiki;
-}
-
-function getArtist() {
-    var randomNumber = Math.floor(Math.random() * TwoKSongs.length);
-    if (randomNumber == storeNumber) {
-        randomNumber++;
-        findSong();
-    } else {
-        findSong();
-    }
 }
