@@ -57,7 +57,7 @@
 }]
 
 
-var storeNumber = 0;
+let storeNumber = 0;
 
 document.getElementById("find").addEventListener("click", getArtist);
 
